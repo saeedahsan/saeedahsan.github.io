@@ -14,9 +14,40 @@ div {
   margin-right: 80px;
   margin-left: 80px;
 }
+#headerUl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#headerLi {
+  float: left;
+}
+
+#headerLi #headerA {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#headerLi #headerA:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
 </style>
 </head>
 <body>
+<ul id="headerUl">
+<li id="headerLi"><a id="headerA" href="index.html">Home</a></li>
+</ul>
 <div>
 <h1>Ahsan Saeed's Portfolio</h1>
 <p>Hello World! Welcome to my portfolio website. This page is currently a work in progress, but feel free to look around!</p>
