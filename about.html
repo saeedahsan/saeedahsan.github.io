@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ahsan Saeed's Portfolio</title>
+<style>
+body {
+  background-image: url('portfolio_wallpaper.jpg');
+  color: white;
+}
+div {
+  background: rgba(0, 0, 0, 0.75);
+}
+#headerUl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#headerLi {
+  float: left;
+}
+
+#headerLi #headerA {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#headerLi #headerA:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+</style>
+</head>
+<body>
+<ul id="headerUl">
+<li id="headerLi"><a id="headerA" href="index.html">Home</a></li>
+<li id="headerLi"><a id="headerA" href="projects.html">Projects</a></li>
+<li id="headerLi"><a id="headerA" class="active" href="about.html">About</a></li>
+</ul>
+<div>
+<h2>About</h2>
+<p>I'm currently a first-year student studying at the University of Toronto Scarborough. My major is in computer science, specializing in the software engineering stream.</p>
+</div>
+</body>
+</html>
