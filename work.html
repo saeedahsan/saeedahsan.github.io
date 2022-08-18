@@ -53,8 +53,269 @@ div {
 <li>Worked on implementing features and fixing bugs for Exponet's in-house software on both web and mobile.</li>
 <li>Worked with a wide range of libraries and frameworks including React, Redux, Grails and Flutter.</li>
 <li>In charge of iOS deployment of software company-wide.</li>
-<h4>Work Sample</h4>
+<h4>Work Sample (August 2022)</h4>
 <p>The following is an aggregation query I created in MongoDB order to create a view that would ease visualization of data in Power BI.</p>
+<p>[{$project: { refundEventList : 1 , shipmentEventList : 1 }}, {$project: {
+  list: {$concatArrays: ["$refundEventList", "$shipmentEventList"]}
+}}, {$unwind: {
+  path: "$list"
+}}, {$addFields: {
+  shipmentItemAdjustmentList: {
+        $map: {
+          input: "$list.shipmentItemAdjustmentList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplaceName"
+                  },
+                  {
+                    orderId: "$list.amazonOrderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      },
+      shipmentItemList: {
+        $map: {
+          input: "$list.shipmentItemList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplaceName"
+                  },
+                  {
+                    orderId: "$list.amazonOrderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      }
+}}, {$project: {
+  list: {$concatArrays: ["$shipmentItemAdjustmentList", "$shipmentItemList"]}
+}}, {$unwind: {
+  path: "$list"
+}}, {$addFields: {
+  itemFeeAdjustmentList: {
+        $map: {
+          input: "$list.itemFeeAdjustmentList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplace"
+                  },
+                  {
+                    sku: "$list.sellerSKU"
+                  },
+                  {
+                    orderId: "$list.orderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  },
+                  {
+                    type: "Fee"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      },
+      itemChargeAdjustmentList: {
+        $map: {
+          input: "$list.itemChargeAdjustmentList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplace"
+                  },
+                  {
+                    sku: "$list.sellerSKU"
+                  },
+                  {
+                    orderId: "$list.orderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  },
+                  {
+                    type: "Charge"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      },
+      itemFeeList: {
+        $map: {
+          input: "$list.itemFeeList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplace"
+                  },
+                  {
+                    sku: "$list.sellerSKU"
+                  },
+                  {
+                    orderId: "$list.orderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  },
+                  {
+                    type: "Fee"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      },
+      itemChargeList: {
+        $map: {
+          input: "$list.itemChargeList",
+          as: "call",
+          in: {
+            $cond: [
+              {
+                $eq: [
+                  true,
+                  true
+                ]
+              },
+              {
+                "$mergeObjects": [
+                  "$$call",
+                  {
+                    marketplace: "$list.marketplace"
+                  },
+                  {
+                    sku: "$list.sellerSKU"
+                  },
+                  {
+                    orderId: "$list.orderId"
+                  },
+                  {
+                    postedDate: "$list.postedDate"
+                  },
+                  {
+                    type: "Charge"
+                  }
+                ]
+              },
+              "$$call"
+            ]
+          }
+        }
+      }
+}}, {$project: {
+  list: {$concatArrays: ["$itemFeeList", "$itemChargeList", "$itemFeeAdjustmentList", "$itemChargeAdjustmentList"]}
+}}, {$unwind: {
+  path: "$list"
+}}, {$addFields: {
+  subtype: {
+    $cond: [{
+      $eq: [
+                  "$list.type",
+                  "Fee"
+          ]
+    },
+    "$list.feeType",
+    "$list.chargeType"]
+  },
+  type: "$list.type",
+  amount: {
+    $cond: [{
+      $eq: [
+                  "$list.type",
+                  "Fee"
+          ]
+    },
+    "$list.feeAmount.currencyAmount",
+    "$list.chargeAmount.currencyAmount"]
+  },
+  currencyCode: {
+    $cond: [{
+      $eq: [
+                  "$list.type",
+                  "Fee"
+          ]
+    },
+    "$list.feeAmount.currencyCode",
+    "$list.chargeAmount.currencyCode"]
+  },
+  marketplace: "$list.marketplace",
+  sku: "$list.sku",
+  orderId: "$list.orderId",
+  postedDate: "$list.postedDate"
+}}, {$project: { list : 0 }}]</p>
 </div>
 </body>
 </html>
