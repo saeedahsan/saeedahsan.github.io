@@ -18,7 +18,7 @@ function Home() {
         </h1>
       </div>
       <div className="flex items-center justify-center">
-        <p>Full-Stack software developer</p>
+        <p>Full-Stack Software Developer</p>
       </div>
   </>
 };
