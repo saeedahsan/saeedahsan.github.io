@@ -23,6 +23,18 @@ function Navbar(props: {
                 </li>
                 <li>
                   <button
+                    onClick={() => props.onNavClick("Work-Experience")}
+                    className={
+                      props.currentLocation === "/work-experience"
+                        ? "text-gray-900 transition hover:text-gray-500/75"
+                        : "text-gray-500 transition hover:text-gray-500/75"
+                    }
+                  >
+                    Work Experience
+                  </button>
+                </li>
+                <li>
+                  <button
                     onClick={() => props.onNavClick("Projects")}
                     className={
                       props.currentLocation === "/projects"
@@ -55,4 +67,3 @@ function Navbar(props: {
 }
 
 export default Navbar;
-

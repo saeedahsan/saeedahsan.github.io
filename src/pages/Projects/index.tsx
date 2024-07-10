@@ -2,7 +2,9 @@ function Projects() {
   return (
     <div className="px-4 h-screen flex flex-col justify-center">
       <h1 className="text-3xl font-bold">Projects</h1>
-      <h2 className="text-2xl font-bold pb-1 pt-4">Restify</h2>
+      <h2 className="text-2xl font-bold pb-1 pt-4">
+        <a href="https://github.com/saeedahsan/Restify">Restify </a>
+      </h2>
       <li>
         Worked in a team to develop a full stack Airbnb replica website using
         Django for the backend and React for the frontend
@@ -16,7 +18,9 @@ function Projects() {
         principles using React to enhance the user experience and improve
         website usability
       </li>
-      <h2 className="text-2xl font-bold pb-1 pt-4">Sayyara</h2>
+      <h2 className="text-2xl font-bold pb-1 pt-4">
+        <a href="https://github.com/saeedahsan/Sayyara">Sayyara </a>
+      </h2>
       <li>
         Worked as a software developer on a progressive web app using React,
         TailwindCSS and Spring, which resulted in the creation of several pages
@@ -33,7 +37,9 @@ function Projects() {
         frontend-backend communication, which simplified and organized the
         development process
       </li>
-      <h2 className="text-2xl font-bold pb-1 pt-4">GroceryApp</h2>
+      <h2 className="text-2xl font-bold pb-1 pt-4">
+        <a href="https://github.com/saeedahsan/GroceryApp">GroceryApp</a>
+      </h2>
       <li>
         Worked in a team to design an e-commerce application using Android
         Studio by following the Agile Scrum framework for software development
@@ -53,4 +59,3 @@ function Projects() {
 }
 
 export default Projects;
-

@@ -4,10 +4,12 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar";
 import { useRef, useState, useEffect } from "react";
+import WorkExperience from "./pages/Work Experience";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>("/home");
   const HomeRef = useRef<HTMLDivElement>(null);
+  const WorkExperienceRef = useRef<HTMLDivElement>(null);
   const ProjectsRef = useRef<HTMLDivElement>(null);
   const AboutRef = useRef<HTMLDivElement>(null);
 
@@ -22,6 +24,10 @@ function App() {
       case "Home":
         scrollToRef(HomeRef);
         setCurrentLocation("/home");
+        break;
+      case "Work-Experience":
+        scrollToRef(WorkExperienceRef);
+        setCurrentLocation("/work-experience");
         break;
       case "Projects":
         scrollToRef(ProjectsRef);
@@ -80,6 +86,9 @@ function App() {
       <Navbar onNavClick={handleNavClick} currentLocation={currentLocation} />
       <div ref={HomeRef} id="Home">
         <Home />
+      </div>
+      <div ref={WorkExperienceRef} id="Work-Experience">
+        <WorkExperience />
       </div>
       <div ref={ProjectsRef} id="Projects">
         <Projects />
