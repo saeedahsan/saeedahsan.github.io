@@ -8,6 +8,9 @@ import WorkExperience from "./pages/Work Experience";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>("/home");
+  const [darkMode, setDarkMode] = useState<boolean>(
+    window.matchMedia("(prefers-color-scheme: dark)").matches,
+  );
   const HomeRef = useRef<HTMLDivElement>(null);
   const WorkExperienceRef = useRef<HTMLDivElement>(null);
   const ProjectsRef = useRef<HTMLDivElement>(null);
@@ -81,11 +84,26 @@ function App() {
     setCurrentLocation("/home");
   }, []);
 
+  useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        setDarkMode(event.matches);
+      });
+  }, []);
+
+  const colours = darkMode ? "bg-gray-900 text-gray-100" : "";
+
   return (
-    <div className="font-mono bg-gray-900 text-gray-100 min-h-screen min-w-screen">
-      <Navbar onNavClick={handleNavClick} currentLocation={currentLocation} />
+    <div className={"font-mono min-h-screen min-w-screen " + colours}>
+      <Navbar
+        onNavClick={handleNavClick}
+        currentLocation={currentLocation}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
       <div ref={HomeRef} id="Home">
-        <Home />
+        <Home darkMode={darkMode} />
       </div>
       <div ref={WorkExperienceRef} id="Work-Experience">
         <WorkExperience />
