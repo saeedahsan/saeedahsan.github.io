@@ -14,8 +14,8 @@ function Navbar(props: {
                     onClick={() => props.onNavClick("Home")}
                     className={
                       props.currentLocation === "/home"
-                        ? "text-gray-900 transition hover:text-gray-500/75"
-                        : "text-gray-500 transition hover:text-gray-500/75"
+                        ? "text-gray-100 transition hover:text-gray-500/75"
+                        : "text-gray-400 transition hover:text-gray-500/75"
                     }
                   >
                     Home
@@ -26,8 +26,8 @@ function Navbar(props: {
                     onClick={() => props.onNavClick("Work-Experience")}
                     className={
                       props.currentLocation === "/work-experience"
-                        ? "text-gray-900 transition hover:text-gray-500/75"
-                        : "text-gray-500 transition hover:text-gray-500/75"
+                        ? "text-gray-100 transition hover:text-gray-500/75"
+                        : "text-gray-400 transition hover:text-gray-500/75"
                     }
                   >
                     Work Experience
@@ -38,8 +38,8 @@ function Navbar(props: {
                     onClick={() => props.onNavClick("Projects")}
                     className={
                       props.currentLocation === "/projects"
-                        ? "text-gray-900 transition hover:text-gray-500/75"
-                        : "text-gray-500 transition hover:text-gray-500/75"
+                        ? "text-gray-100 transition hover:text-gray-500/75"
+                        : "text-gray-400 transition hover:text-gray-500/75"
                     }
                   >
                     Projects
@@ -50,8 +50,8 @@ function Navbar(props: {
                     onClick={() => props.onNavClick("About")}
                     className={
                       props.currentLocation === "/about"
-                        ? "text-gray-900 transition hover:text-gray-500/75"
-                        : "text-gray-500 transition hover:text-gray-500/75"
+                        ? "text-gray-100 transition hover:text-gray-500/75"
+                        : "text-gray-400 transition hover:text-gray-500/75"
                     }
                   >
                     About

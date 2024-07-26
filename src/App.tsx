@@ -65,7 +65,7 @@ function App() {
       observerOptions,
     );
 
-    [HomeRef, ProjectsRef, AboutRef].forEach((ref) => {
+    [HomeRef, WorkExperienceRef, ProjectsRef, AboutRef].forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
       }
@@ -82,7 +82,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="font-mono bg-gray-900 text-gray-100 min-h-screen min-w-screen">
       <Navbar onNavClick={handleNavClick} currentLocation={currentLocation} />
       <div ref={HomeRef} id="Home">
         <Home />
