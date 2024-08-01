@@ -3,6 +3,18 @@ function Projects() {
     <div className="px-4 h-screen flex flex-col justify-center">
       <h1 className="text-3xl font-bold">Projects</h1>
       <h2 className="text-2xl font-bold pb-1 pt-4">
+        <a href="https://github.com/langchain-ai/langchainjs">LangChain </a>
+      </h2>
+      <li>
+        Contributed large-scale feature to LangChain, a framework for developing
+        applications powered by LLM’s with more than 5 million downloads and
+        powering over 50,000 applications
+      </li>
+      <li>
+        Implemented email toolkit to facilitate AI generated emails powered by
+        LLMs, integrating with the Gmail API
+      </li>
+      <h2 className="text-2xl font-bold pb-1 pt-4">
         <a href="https://github.com/saeedahsan/Restify">Restify </a>
       </h2>
       <li>
@@ -36,23 +48,6 @@ function Projects() {
         Worked with the backend development team to design the API for
         frontend-backend communication, which simplified and organized the
         development process
-      </li>
-      <h2 className="text-2xl font-bold pb-1 pt-4">
-        <a href="https://github.com/saeedahsan/GroceryApp">GroceryApp</a>
-      </h2>
-      <li>
-        Worked in a team to design an e-commerce application using Android
-        Studio by following the Agile Scrum framework for software development
-      </li>
-      <li>
-        Made use of a Firebase Realtime Database to keep track of accounts,
-        stores, products and other user information, which allowed for quick,
-        real-time data storage so different users could communicate effectively
-      </li>
-      <li>
-        Performed both unit and integration testing for several modules which,
-        combined with the entire team’s tests, resulted in a test suite which
-        minimized any bugs or errors in the application
       </li>
     </div>
   );
