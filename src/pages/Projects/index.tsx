@@ -3,7 +3,13 @@ function Projects() {
     <div className="px-4 h-screen flex flex-col justify-center">
       <h1 className="text-3xl font-bold">Projects</h1>
       <h2 className="text-2xl font-bold pb-1 pt-4">
-        <a href="https://github.com/langchain-ai/langchainjs">LangChain </a>
+        <a
+          href="https://github.com/langchain-ai/langchainjs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LangChain{" "}
+        </a>
       </h2>
       <li>
         Contributed large-scale feature to LangChain, a framework for developing
@@ -15,7 +21,13 @@ function Projects() {
         LLMs, integrating with the Gmail API
       </li>
       <h2 className="text-2xl font-bold pb-1 pt-4">
-        <a href="https://github.com/saeedahsan/Restify">Restify </a>
+        <a
+          href="https://github.com/saeedahsan/Restify"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Restify{" "}
+        </a>
       </h2>
       <li>
         Worked in a team to develop a full stack Airbnb replica website using
@@ -31,7 +43,13 @@ function Projects() {
         website usability
       </li>
       <h2 className="text-2xl font-bold pb-1 pt-4">
-        <a href="https://github.com/saeedahsan/Sayyara">Sayyara </a>
+        <a
+          href="https://github.com/saeedahsan/Sayyara"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sayyara{" "}
+        </a>
       </h2>
       <li>
         Worked as a software developer on a progressive web app using React,
