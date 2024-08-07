@@ -4,7 +4,13 @@ function WorkExperience() {
       <h1 className="text-3xl font-bold">Work Experience</h1>
       <h2 className="text-2xl font-bold pb-1 pt-4">
         {"Full-Stack Software Developer - "}
-        <a href="https://www.northernlabs.ca/">Northern Labs</a>
+        <a
+          href="https://www.northernlabs.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Northern Labs
+        </a>
       </h2>
       <li>
         Developed and implemented frontend components in React based on Figma
@@ -28,7 +34,13 @@ function WorkExperience() {
       </li>
       <h2 className="text-2xl font-bold pb-1 pt-4">
         {"Full-Stack Software Developer - "}
-        <a href="https://www.exponet.ca/">Exponet Canada Inc.</a>
+        <a
+          href="https://www.exponet.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Exponet Canada Inc.
+        </a>
       </h2>
       <li>
         Worked as a full stack developer on the company’s web and mobile
