@@ -1,4 +1,7 @@
 import "./styles.css";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "@mui/material/Link";
 
 function Home(props: { darkMode: boolean }) {
   const cursorColour = props.darkMode ? "bg-gray-100" : "bg-black";
@@ -11,12 +14,20 @@ function Home(props: { darkMode: boolean }) {
         </span>
         <span
           className={
-            "box-border inline-block w-1 h-10 ml-2 -mb-2  md:-mb-4 md:h-20 animate-cursor will-change-transform " +
+            "box-border inline-block w-1 h-10 ml-2 -mb-2 md:-mb-4 md:h-20 animate-cursor will-change-transform " +
             cursorColour
           }
         ></span>
       </h1>
-      <p>Full-Stack Software Developer</p>
+      <p className="mb-2">Full-Stack Software Developer</p>
+      <div>
+        <Link href="https://www.linkedin.com/in/ahsan-saeed-0ab27222b/">
+          <LinkedInIcon />
+        </Link>
+        <Link href="mailto:ahsan02@gmail.com">
+          <EmailIcon />
+        </Link>
+      </div>
     </div>
   );
 }
