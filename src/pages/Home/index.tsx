@@ -1,5 +1,6 @@
 import "./styles.css";
 import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "@mui/material/Link";
 
@@ -20,9 +21,12 @@ function Home(props: { darkMode: boolean }) {
         ></span>
       </h1>
       <p className="mb-2">Full-Stack Software Developer</p>
-      <div>
+      <div className="flex gap-4">
         <Link href="https://www.linkedin.com/in/ahsan-saeed-0ab27222b/">
           <LinkedInIcon />
+        </Link>
+        <Link href="https://github.com/saeedahsan">
+          <GitHubIcon />
         </Link>
         <Link href="mailto:ahsan02@gmail.com">
           <EmailIcon />
