@@ -22,10 +22,18 @@ function Home(props: { darkMode: boolean }) {
       </h1>
       <p className="mb-2">Full-Stack Software Developer</p>
       <div className="flex gap-4">
-        <Link href="https://www.linkedin.com/in/ahsan-saeed-0ab27222b/">
+        <Link
+          href="https://www.linkedin.com/in/ahsan-saeed-0ab27222b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LinkedInIcon />
         </Link>
-        <Link href="https://github.com/saeedahsan">
+        <Link
+          href="https://github.com/saeedahsan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GitHubIcon />
         </Link>
         <Link href="mailto:ahsan02@gmail.com">
