@@ -8,6 +8,7 @@ function WorkExperience() {
           href="https://www.northernlabs.ca/"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#1976d2]"
         >
           Northern Labs
         </a>
@@ -38,6 +39,7 @@ function WorkExperience() {
           href="https://www.exponet.ca/"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#1976d2]"
         >
           Exponet Canada Inc.
         </a>
