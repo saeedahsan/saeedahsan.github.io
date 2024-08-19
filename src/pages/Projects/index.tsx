@@ -7,6 +7,7 @@ function Projects() {
           href="https://github.com/langchain-ai/langchainjs"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#1976d2]"
         >
           LangChain{" "}
         </a>
@@ -25,6 +26,7 @@ function Projects() {
           href="https://github.com/saeedahsan/Restify"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#1976d2]"
         >
           Restify{" "}
         </a>
@@ -47,6 +49,7 @@ function Projects() {
           href="https://github.com/saeedahsan/Sayyara"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#1976d2]"
         >
           Sayyara{" "}
         </a>
