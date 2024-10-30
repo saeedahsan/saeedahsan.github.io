@@ -1,26 +1,37 @@
 .will-change-transform {
-    will-change: transform;
-  }
+  will-change: transform;
+}
 
-  .cursor::after {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 100%;
-    background-color: #fff;
-    animation: cursor 0.6s linear infinite alternate;
-    will-change: opacity;
+.cursor::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  animation: cursor 0.6s linear infinite alternate;
+  will-change: opacity;
+}
+
+/* Typing Animation */
+@keyframes type {
+  from {
+    width: 0;
   }
-   
-  @keyframes cursor {
-    0%,
-    40% {
-      opacity: 1;
-    }
-   
-    60%,
-    100% {
-      opacity: 0;
-    }
+  to {
+    width: 48%;
   }
+}
+
+/* Blinking Cursor Animation */
+@keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+
