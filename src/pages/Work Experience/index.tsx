@@ -14,24 +14,28 @@ function WorkExperience() {
         </a>
       </h2>
       <li>
-        Developed and implemented frontend components in React based on Figma
-        designs, enhancing user interface and experience for a blockchain-based
-        payment widget
+        Built a blockchain-based payment widget, reducing render times by 34%
+        with SSR and memoization
       </li>
       <li>
-        Engineered backend systems using NestJS and PostgreSQL, including user
-        and publisher account management, integration with Stripe, and
-        transaction processing for NFT minting and blockchain integration
+        Developed a backend in NestJS and PostgreSQL, supporting 250,000+ users
+        and 35,000 daily concurrent users
       </li>
       <li>
-        Established unit testing and logging for backend services, ensuring code
-        reliability and robustness, and utilized Docker for streamlined
-        development and deployment processes
+        Integrated Stripe and NFT blockchain payments, processing $13,000+ in
+        daily transactions
       </li>
       <li>
-        Mentored and guided other interns, assisting them with daily tasks and
-        fostering their development in full stack technologies and best
-        practices
+        Improved software reliability by boosting test coverage to 98%,
+        implementing distributed logging, and setting up CI/CD with Docker
+      </li>
+      <li>
+        Mentored 3 interns, reviewing 100+ PRs, teaching full-stack development
+        concepts, and completing project 2 weeks ahead of schedule
+      </li>
+      <li>
+        Presented final MVP to a large audience of stakeholders, showcasing and
+        explaining key features and functionalities
       </li>
       <h2 className="text-2xl font-bold pb-1 pt-4">
         {"Full-Stack Software Developer - "}
@@ -45,20 +49,32 @@ function WorkExperience() {
         </a>
       </h2>
       <li>
-        Worked as a full stack developer on the company’s web and mobile
-        applications using React, Grails and Flutter, resulting in the addition
-        of numerous features on both platforms which greatly aided the company’s
-        day-to-day operations
+        Contributed over 50 features to the web and mobile applications, greatly
+        improving delivery timelines by weeks
       </li>
       <li>
-        As the mobile deployment manager, thoroughly tested and deployed new
-        updates to both Android and iOS platforms, resulting in seamless and
-        bug-free updates which greatly benefited the employees using the app
+        Managed Android and iOS deployments, deploying updates and features with
+        100% uptime over 6 months
       </li>
       <li>
-        Reviewed and executed quality assurance testing on other developers’
-        code, which helped to maintain code quality and ensured that the live
-        application was functional and bug-free
+        Built an automated testing platform in Java, running daily tests on
+        50,000+ lines of code, ensuring code quality
+      </li>
+      <li>
+        Developed a feature to automate shipment tracking and document
+        generation, saving 10+ hours of work weekly
+      </li>
+      <li>
+        Automated invoice retrieval by integrating with Gmail API to fetch
+        invoices, which improved efficiency by 25%
+      </li>
+      <li>
+        Led enhancements to eBay Marketplace integration by adding key features,
+        increasing efficiency by 30%
+      </li>
+      <li>
+        Enhanced the Flutter mobile app with new pages and features, server
+        error handling, and alerts
       </li>
     </div>
   );
